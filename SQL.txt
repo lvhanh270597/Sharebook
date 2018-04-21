@@ -1,0 +1,77 @@
+
+create table admin(
+	username 	varchar(20) primary key,
+	phone 		varchar(12),
+	password 	varchar(20), 
+	firstname 	varchar(100),
+	lastname 	varchar(100),
+	email		varchar(100),
+	address		varchar(200)
+);
+
+create table user(
+	username 	varchar(20) primary key,
+	phone 		varchar(12),
+	password 	varchar(20), 
+	firstname 	varchar(100),
+	lastname 	varchar(100),
+	email		varchar(100),
+	address		varchar(200),
+	money		int, 
+	typef		varchar(10)	
+);
+
+create table book(
+	bookid		int primary key,
+	name		varchar(200),
+	author		varchar(200),
+	provider	varchar(20),	
+	kind		varchar(50),
+	summary		varchar(500),
+	status 		varchar(20),
+	value		int,
+	willbefree	datetime,
+	public		boolean,
+	typef		varchar(10)
+);
+alter table book add foreign key(provider) references user(username);
+
+create table borrow(
+	borrowid	int primary key,
+	borrower	varchar(20),
+	bookid		int,
+	start		datetime,
+	end		datetime,
+	returned	boolean
+);
+alter table borrow add foreign key(borrower) 	references user(username);
+alter table borrow add foreign key(bookid) 		references book(bookid);
+
+create table rent(
+	rentid		int primary key,
+	renter		varchar(20),
+	bookid		int,
+	start		datetime,	
+	getback		boolean
+);
+alter table rent add foreign key(renter) 		references user(username);
+alter table rent add foreign key(bookid) 		references book(bookid);
+
+create table req_borrow(
+	req_id		int primary key,
+	req_er		varchar(20),
+	bookid		int,
+	weeks		int,
+	start		datetime
+);
+alter table req_borrow add foreign key(req_er) 	references user(username);
+alter table req_borrow add foreign key(bookid)	references book(bookid);
+
+create table req_rent(
+	req_id		int primary key,
+	req_er		varchar(20),
+	bookid		int,
+	start		datetime
+);
+alter table req_rent add foreign key(req_er) 	references user(username);
+alter table req_rent add foreign key(bookid)	references book(bookid);
