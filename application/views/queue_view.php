@@ -4,7 +4,6 @@
     <thead>
       <tr>
         <th>ID</th>
-        <th>Week(s)</th>
         <th>Requester</th>
         <th>Book</th>
         <th>Accept</th>
@@ -17,10 +16,8 @@
 				$reqid = $value['req_id'];
 				$req_er = $value['req_er'];
 				$bookid = $value['bookid'];				
-				$weeks = $value['weeks'];	
 				echo '<tr>';				
 				echo '<td>'.$reqid.'</td>';
-				echo '<td>'.$weeks.'</td>';
 				echo '<td> <a href="'.site_url('admin/view_user/'.$req_er).'"> '.$req_er.' </a> </td>';
 				echo '<td> <a href="'.site_url('admin/view_book/'.$bookid).'">'.$bookid.'</a> </td>';
 				echo '<td> <a href="'.site_url('admin/accept/'.$req_er.'/'.$reqid).'"> Accept </a> </td>';
