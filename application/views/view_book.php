@@ -19,7 +19,7 @@
 
         <div class="col-md-8">
         	<?php
-        	$image = base_url().'books/'.$product['bookid'].'_detail'.$product['typef'];
+        	$image = base_url().'books/'.$product['bookid'].''.$product['typef'];
           	echo '<img class="img-fluid" src="'.$image.'" alt="">';
           	 
           	?>
