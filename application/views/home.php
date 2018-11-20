@@ -32,13 +32,7 @@
                   echo '<br>Money: <strong> '.$value['value'].'k </strong> </p>
                       </div>';
                         
-                  echo '<hr class="my-0">
-                        <div class="card-body py-2 small">
-                          <a class="mr-3 d-inline-block" href="#">
-                            <i class="fa fa-fw fa-thumbs-up"></i>Like</a>
-                          <a class="mr-3 d-inline-block" href="#">
-                            <i class="fa fa-fw fa-comment"></i>Comment</a>                          
-                        </div>
+                  echo '       
                         <div class="card-footer small text-muted">Available on '.date('Y:m:d', strtotime($value['willbefree'])).'</div>
                        </div>';
                 }

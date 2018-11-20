@@ -17,7 +17,15 @@
     <!-- Bootstrap core CSS -->
 
     <link href="<?php echo base_url('themes/theme1/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-
+    <?php
+      include_once "page_data_class.php";
+      $page_data = new Page_Data();
+      $page_data->addCSS(base_url().'themes/theme1/vendor/bootstrap/css/bootstrap.min.css');
+      $page_data->addCSS(base_url().'themes/theme1/css/modern-business.css');
+      $page_data->show_css();
+    ?>    
+    <link href="<?php echo base_url().'themes/theme3/'; ?>css/one-page-wonder.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <!-- Material Design Bootstrap -->
     <link href="<?php echo base_url('themes/mdb.min.css'); ?>" rel="stylesheet">      
   </head>
