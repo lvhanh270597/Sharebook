@@ -47,19 +47,25 @@
                 <td><strong><?php echo $product['value']; ?>k</strong></td>                
               </tr>
             </tbody>
-          </table>                    
+          </table>                            
           <?php
       			if ($product['status'] == 'Available'){
       				echo '<form method="post" action="'.site_url('borrow/play').'">              
-              <select class="browser-default custom-select" name="num">
-                <option selected>Open this select menu</option>
-                <option value="1">Một tuần</option>
-                <option value="2">Hai tuần</option>
-                <option value="3">Ba tuần</option>
-                <option value="4">Một tháng</option>
-              </select>
 
-                <button name="btn" class="btn btn-success" value="'.$product['bookid'].'"> Borrow </button>                
+            <div class="row">
+              <div class="col-md-6">              
+                <select class="browser-default custom-select" name="num">
+                  <option selected>Open this select menu</option>
+                  <option value="1">Một tuần</option>
+                  <option value="2">Hai tuần</option>
+                  <option value="3">Ba tuần</option>
+                  <option value="4">Một tháng</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <button name="btn" class="btn btn-success" value="'.$product['bookid'].'"> Borrow </button>  
+              </div>
+            </div>              
               </form>';
       			}
 		  	  ?>	
