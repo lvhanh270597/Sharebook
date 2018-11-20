@@ -8,7 +8,6 @@
 	 
 		public function index()
 		{		
-			echo "asc";
 			$front_end = array();
 			$front_end['title'] = 'Home';
 			$front_end['kind'] = 'All';
