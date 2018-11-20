@@ -55,7 +55,7 @@
             <div class="row">
               <div class="col-md-6">              
                 <select class="browser-default custom-select" name="num">
-                  <option selected>Open this select menu</option>
+                  <option selected>Bạn mượn bao lâu?</option>
                   <option value="1">Một tuần</option>
                   <option value="2">Hai tuần</option>
                   <option value="3">Ba tuần</option>
