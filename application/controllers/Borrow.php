@@ -65,7 +65,6 @@
 			if ($this->input->post('btn')){
 				$bookid = $this->input->post('btn');	
 				$weeks = $this->input->post('num');
-				$weeks = $number[$weeks];				
 				if ($this->book->exist($bookid)){						
 					redirect('borrow/choose/'.$bookid.'/'.$weeks);
 				}
