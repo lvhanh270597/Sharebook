@@ -144,4 +144,16 @@ if ( ! function_exists('validString'))
     }   
 }
 
+if (!function_exists('get_substr')){
+	function get_substr($str){
+		$num = 0;
+		$res = '';
+		foreach (explode($str, ' ') as $s){
+			$res .= $s;
+			$num += strlen($s);
+			if ($num > 20) break;
+		}
+		return $res;
+	}
+}
 

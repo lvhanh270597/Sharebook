@@ -25,9 +25,9 @@
                       <img class="card-img-top img-fluid w-100" src="'.$image.'" alt=""> 
                       </a>';
                   echo '<div class="card-body">
-                      <h6 class="card-title mb-1"><a href="'.$view.'">'.substr($value['name'], 0, 20).'...</a></h6>';
-                  echo '<p class="card-text small"> '.substr($value['summary'], 0, 25).'...';
-                  echo '<br>Author: <strong> '.substr($value['author'], 0, 25).' </strong>';
+                      <h6 class="card-title mb-1"><a href="'.$view.'">'.get_substr($value['name'], 0, 20).'...</a></h6>';
+                  echo '<p class="card-text small"> '.get_substr($value['summary'], 0, 25).'...';
+                  echo '<br>Author: <strong> '.get_substr($value['author'], 0, 25).' </strong>';
                   echo '<br>Status: <strong> '.$value['status'].' </strong>';
                   echo '<br>Money: <strong> '.$value['value'].'k </strong> </p>
                       </div>';
