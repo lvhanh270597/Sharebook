@@ -75,14 +75,14 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1',
+	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => 'Xfam0usx',
 	'database' => 'book',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => TRUE, //(ENVIRONMENT !== 'production'),
+	'db_debug' => TRUE,//(ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
