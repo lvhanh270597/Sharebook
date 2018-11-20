@@ -205,9 +205,7 @@
 				$this->req_rent->del_item($req_id);				
 				// delete images in books				
 				$this_book = $this->book->get_item($item['bookid']);
-				shell_exec('rm -vrf books/'.$this_book['bookid'].$this_book['typef']);
-				shell_exec('rm -vrf books/'.$this_book['bookid'].'_home'.$this_book['typef']);
-				shell_exec('rm -vrf books/'.$this_book['bookid'].'_detail'.$this_book['typef']);		
+				shell_exec('rm -vrf books/'.$this_book['bookid'].$this_book['typef']);				
 				// delete book
 				$this->book->del_item($item['bookid']);
 			}
