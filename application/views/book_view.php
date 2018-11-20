@@ -50,22 +50,15 @@
           </table>                    
           <?php
       			if ($product['status'] == 'Available'){
-      				echo '<form method="post" action="'.site_url('borrow/play').'">
-              <div class="dropdown bootstrap-select dropup">
-              <select class="selectpicker" tabindex="-98" name="num">
-                <option>a week</option>
-                <option>two weeks</option>
-                <option>three weeks</option>
-                <option>a month</option>
+      				echo '<form method="post" action="'.site_url('borrow/play').'">              
+              <select class="browser-default custom-select" name="num">
+                <option selected>Open this select menu</option>
+                <option value="1">Một tuần</option>
+                <option value="2">Hai tuần</option>
+                <option value="3">Ba tuần</option>
+                <option value="4">Một tháng</option>
               </select>
-              <button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="button" title="Mustard" aria-expanded="false">
-                <div class="filter-option">
-                  <div class="filter-option-inner">
-                    <div class="filter-option-inner-inner">Mustard
-                    </div>
-                  </div>
-                </div>
-              </button>              
+
                 <button name="btn" class="btn btn-success" value="'.$product['bookid'].'"> Borrow </button>                
               </form>';
       			}

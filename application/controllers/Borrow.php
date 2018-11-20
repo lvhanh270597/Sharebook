@@ -61,13 +61,7 @@
 			display('borrow_view', $data);			
 		}
 
-		public function play(){						
-			$number = array(
-				'a week' 		=> 1,
-				'two weeks' 	=> 2,
-				'three weeks' 	=> 3,
-				'a month'		=> 4
-			);
+		public function play(){									
 			if ($this->input->post('btn')){
 				$bookid = $this->input->post('btn');	
 				$weeks = $this->input->post('num');
