@@ -48,6 +48,7 @@
               </tr>
             </tbody>
           </table>          
+          <div class="bs-docs-example">
           <?php
       			if ($product['status'] == 'Available'){
       				echo '<form method="post" action="'.site_url('borrow/play').'">
@@ -68,7 +69,8 @@
                 <button name="btn" class="btn btn-success" value="'.$product['bookid'].'"> Borrow </button>                
               </form>';
       			}
-		  	?>	
+		  	  ?>	
+          </div>
         </div>
 
       </div>
