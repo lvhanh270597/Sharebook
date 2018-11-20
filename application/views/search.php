@@ -26,8 +26,8 @@
                       </a>';
                   echo '<div class="card-body">
                       <h6 class="card-title mb-1"><a href="'.$view.'">'.$value['name'].'</a></h6>';
-                  echo '<p class="card-text small"> '.substr($value['summary'], 0, 25).'...';
-                  echo '<br>Author: <strong> '.$value['author'].' </strong>';
+                  echo '<p class="card-text small"> '.get_substr($value['summary']).'...';
+                  echo '<br>Author: <strong> '.get_substr($value['author']).' </strong>';
                   echo '<br>Status: <strong> '.$value['status'].' </strong>';
                   echo '<br>Money: <strong> '.$value['value'].'k </strong> </p>
                       </div>';
