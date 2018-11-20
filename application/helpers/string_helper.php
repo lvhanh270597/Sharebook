@@ -151,7 +151,7 @@ if (!function_exists('get_substr')){
 		foreach (explode(' ', $str) as $s){
 			$res .= $s.' ';
 			$num += strlen($s);
-			if ($num > 20) break;
+			if ($num > 50) break;
 		}
 		return $res;
 	}
