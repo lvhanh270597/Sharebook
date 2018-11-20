@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('session','database','loading');
+$autoload['libraries'] = array('session');
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +89,8 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','html', 'script','cookie', 'time', 'layout', 'string', 'image', 'user');
+$autoload['helper'] = array('form', 'url', 'layout', 'string', 'process');
+
 /*
 | -------------------------------------------------------------------
 |  Auto-load Config files
@@ -131,4 +132,12 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('review_ml', 'guess_ml', 'notification_ml', 'product_ml');
+$autoload['model'] = array(
+	'User_model' => 'user', 
+	'Admin_model' => 'admin',	
+	'Book_model' => 'book',
+	'Borrow_model' => 'borrow',
+	'Rent_model' => 'rent',
+	'request_borrow' => 'req_borrow',
+	'Request_rent' => 'req_rent',
+);
