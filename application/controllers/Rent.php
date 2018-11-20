@@ -63,9 +63,6 @@ class Rent extends CI_Controller
 					'willbefree'	=> date('Y-m-d H:i:s'),					
 				);							
 				$this->book->add_item($sql);
-				// resize image 700 x 450 to 
-				shell_exec('convert books/'.$bookid.$sql['typef'].' -resize 700x450! books/'.$bookid.'_home'.$sql['typef']);
-				shell_exec('convert books/'.$bookid.$sql['typef'].' -resize 700x500! books/'.$bookid.'_detail'.$sql['typef']);
 				
 				$sql = array(
 					'req_id' 	=> $this->req_rent->get_id(),

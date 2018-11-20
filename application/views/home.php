@@ -19,7 +19,7 @@
                 <?php   
                 foreach ($books as $key => $value) {
                   echo '<div class="card mb-3">';
-                  $image = base_url().'books/'.$value['bookid'].'_home'.$value['typef'];
+                  $image = base_url().'books/'.$value['bookid'].''.$value['typef'];
                   $view = site_url('book/view/'.$value['bookid']);
                   echo '<a href="'.$view.'">
                       <img class="card-img-top img-fluid w-100" src="'.$image.'" alt=""> 
